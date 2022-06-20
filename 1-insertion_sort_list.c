@@ -12,6 +12,9 @@ void insertion_sort_list(listint_t **list)
 
 	node_tmp = (*list)->next;
 
+	if (!list || !*list || (*list)->next)
+		return;
+
 	while (node_tmp)
 	{
 		Prev = node_tmp->prev;
