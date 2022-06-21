@@ -56,7 +56,7 @@ void print_array(const int *array, size_t size)
  *
  * @list: The list to be printed
  */
-void print_list(const listint_t *list)
+void print_list(const listint_t *list)sss
 {
     int i;
 
