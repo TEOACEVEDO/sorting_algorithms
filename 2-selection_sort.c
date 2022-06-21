@@ -26,7 +26,7 @@ void selection_sort(int *array, size_t size)
 			array[min] = tmp_prev;
 			array[pos] = tmp_min;
 
-			if (pos == size - 2 || flag_swap == 0)
+			if ((pos == size - 2 && flag_swap == 0) || pos == size - 2) 
 				return;
 			pos++;
 			idx = pos;
