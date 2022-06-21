@@ -15,6 +15,7 @@ void selection_sort(int *array, size_t size)
 
 	if (!array || size <= 0)
 		return;
+
 	tmp_min = array[0];
 	tmp_prev = tmp_min;
 
@@ -28,17 +29,17 @@ void selection_sort(int *array, size_t size)
 			}
 			array[min] = tmp_prev;
 			array[pos] = tmp_min;
+			if (flag_swap > 0)
+			{
+				print_array(array, size);
+				flag_swap = 0;
+			}
 			if ((pos == size - 2 && flag_swap == 0) || pos == size - 2)
 				return;
 			pos++;
 			idx = pos;
 			tmp_min = array[pos];
 			tmp_prev = tmp_min;
-			if (flag_swap > 0)
-			{
-				print_array(array, size);
-				flag_swap = 0;
-			}
 		}
 		if (tmp_min > array[idx + 1])
 		{
